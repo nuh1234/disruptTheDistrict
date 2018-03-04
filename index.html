@@ -125,6 +125,28 @@
 			Begin your search for "the truth" now...</h2>
 	</div>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			var isError = false;
+			var apiKey = "AIzaSyCR12QD4hb5wiaMHta6weSA_tuRXjsAOSE";
+			$(document).ready(function(){
+				$("#usr").keyup(function(event) {
+					if (event.keyCode === 13) {
+						$("#go").click();
+					}
+				});
+				$("#go").click(function(){
+					var input = document.getElementById('usr').value;
+					localStorage.setItem("zip", input);
+					$.ajax({url: "https://content.googleapis.com/civicinfo/v2/representatives?address=" + encodeURI(input) + "&alt=json&key=" + apiKey, async: true, error: isError = function() {
+						alert("You entered an invalid address. Please try again.");}, success: function() {
+						window.location.href = "./search.html?" + input;
+						localStorage.setItem("zip", input);
+					}})	
+					//window.location.href = "./search.html?" + input;
+				})
+			});
+		</script>
 	
 
 

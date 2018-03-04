@@ -28,7 +28,7 @@
   }
   .card
   {
-	height:75%;
+	height:242px;
 	width:300px;
 	margin: 50px;
   }
@@ -65,7 +65,7 @@
   <div class = "bg">
   <div class="container" style="width: 50%; height: 50%; top: 200px;">
    
-	
+	<!--
 	<div id="deck1" class="card-deck">
 	
 	
@@ -186,12 +186,78 @@
 			<div id="demo8" class="collapse">
 				Info...
 			</div>
-			
-        </div>
-      </div>
-	  
-    
-	</div>
+      !-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script> 
+  //const urlParams = new URLSearchParams(window.location.search);
+  //var location = "";
+  //location = location + document.URL;
+  var num = localStorage.getItem("zip");
+  console.log(num);
+  var apiKey = "AIzaSyCR12QD4hb5wiaMHta6weSA_tuRXjsAOSE";
+ //  localStorage.g
+  //"" + urlParams.toString().replace("=", "");
+  //var newLocation = location;
+  //var apiKey = "AIzaSyCR12QD4hb5wiaMHta6weSA_tuRXjsAOSE";
+  //console.log(location);
+  //$(document).ready(function() {
+    var numOfficials = 0;
+    $.ajax({url:"https://content.googleapis.com/civicinfo/v2/representatives?address=" + 
+    //encodeURI(num) 
+    num + "&alt=json&key=" + apiKey, async: true, success: function(result) {
+        numOfficials = result.offices.length;
+        console.log(numOfficials);
+        var numDecks = 1;
+        for (i = 0; i < numOfficials; i++) {
+          if (i % 4 == 0) {
+            document.write("\<div class = \"deck" + numDecks + "\"" + "class=\"card-deck\">");
+            console.log("\<div class = \"deck" + numDecks + "\"" + "class=\"card-deck\">");
+            numDecks++;
+            console.log(numDecks);
+          }
+          document.write("\<div class =\"card\">");
+          console.log("\<div class =\"card\">");
+          document.write("\<img class = \"card-img-top\" src=\"" + result.officials[i].photoUrl + "\" " +  "alt=\"" + result.officials[i].name + " image\">" ); //image part of card
+          console.log("\<img class = \"card-img-top\" src=\"" + result.officials[i].photoUrl + "\" " +  "alt=\"" + result.officials[i].name + " image\">");
+          //console.log(result.officials[i].photoUrl);
+          document.write("\<div class=\"card-block\">");
+          console.log("\<div class=\"card-block\">");
+          document.write("\<button style=\"width:100%\" type=\"button\" class=\"btn btn-info\" data-toggle=\"collapse\" data-target=\"#demo\" aria-expanded=\"true\" aria-controls=\"collapseOne\">");
+          console.log("\<button style=\"width:100%\" type=\"button\" class=\"btn btn-info\" data-toggle=\"collapse\" data-target=\"#demo\" aria-expanded=\"true\" aria-controls=\"collapseOne\">");
+          document.write("" + result.officials[i].name);
+          console.log("" + result.officials[i].name);
+          document.write("\</button>");
+          console.log("\</button>");
+          document.write("\<div id=\"demo\" class=\"collapse\">");
+          console.log("\<div id=\"demo\" class=\"collapse\">");
+          document.write("Party " + result.officials[i].party);
+          console.log("Party " + result.officials[i].party);
+          document.write("Phone: " + result.officials[i].phones.toString());
+          console.log("Phone: " + result.officials[i].phones.toString());
+          document.write("Website: " + result.officials[i].urls.toString());
+          console.log("Website: " + result.officials[i].urls.toString());
+          document.write("\</div>");
+          console.log("\</div>");
+          document.write("\</div>");
+          console.log("\</div>");
+          document.write("\</div>");
+          console.log("\</div>");
+          if (i % 4 == 3) {
+            document.write("\</div>"); //to close the deck
+            console.log("\</div>");
+          }
+          else if (i == numOfficials - 1) {
+            document.write("\</div>"); //to close the deck
+            console.log("\</div>");
+          }
+        }
+        //console.log(result.offices.length);
+        //console.log(result.officials[2].name);
+        //console.log(result.officials[2].party);
+        //console.log(result.officials[2].phones.toString());
+    }});
+
+  </script>
 	
   </div>
   </div>

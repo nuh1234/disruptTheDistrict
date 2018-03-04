@@ -16,13 +16,15 @@
   {
 	height: 200px;
 	width: 800px;
-	margin-top: 50px;
+	margin-top: 15px;
+	position: relative;
   }
   #deck2
   {
 	height: 200px;
 	width: 800px;
-	margin-top: 150px;
+	margin-top: 170px;
+	position: relative;
   }
   .card
   {
@@ -43,18 +45,15 @@
 	background-color:white;
 	padding: 20px;
   }
-  #demo1
-  {
-	color:red;
-  }
   .bg{
 	background-image: url("capitolhill.jpg");
 
 		/* Full height */
 		height: 100%; 
-
+		width: 100%;
 		/* Center and scale the image nicely */
 		background-position: center;
+		overflow: auto;
 		background-repeat: no-repeat;
 		background-size: cover;
   }
@@ -65,10 +64,12 @@
 <body>
   <div class = "bg">
   <div class="container" style="width: 50%; height: 50%; top: 200px;">
-    <div id="deck1" class="card-deck">
+   
+	
+	<div id="deck1" class="card-deck">
 	
 	
-
+	
       <div class="card">
         <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg" alt="Card image cap">
         <div class="card-block">
@@ -91,7 +92,7 @@
 			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2" aria-expanded="true" 
 			aria-controls="collapseOne">Barack Obama</button>
 			<div id="demo2" class="collapse">
-				Info...
+				Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...
 			</div>
 			
         </div>
@@ -126,6 +127,11 @@
     
 	</div>
 	
+	
+	
+	
+
+	
 	<div id="deck2" class="card-deck">
 	
 	
@@ -138,7 +144,7 @@
 			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5" aria-expanded="true" 
 			aria-controls="collapseOne">Barack Obama</button>
 			<div id="demo5" class="collapse">
-				Info...
+				Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...Info...
 			</div>
 			
         </div>
@@ -186,12 +192,13 @@
 	  
     
 	</div>
+	
   </div>
   </div>
+  
+
+  
 </body>
 
-<script>
-
-</script>
 
 </html>

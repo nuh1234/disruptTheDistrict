@@ -4,50 +4,194 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  * {
+    box-sizing: border-box
+  } 
+  #deck1
+  {
+	height: 200px;
+	width: 800px;
+	margin-top: 50px;
+  }
+  #deck2
+  {
+	height: 200px;
+	width: 800px;
+	margin-top: 150px;
+  }
+  .card
+  {
+	height:75%;
+	width:300px;
+	margin: 50px;
+  }
+  h4{
+	font-size:20px;
+	text-align:center;
+  }
+  .card-block
+  {
+	width: 100%;
+  }
+  div.collapse
+  {
+	background-color:white;
+	padding: 20px;
+  }
+  #demo1
+  {
+	color:red;
+  }
+  .bg{
+	background-image: url("capitolhill.jpg");
+
+		/* Full height */
+		height: 100%; 
+
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+  }
+  </style>
+  
+</head>
+
+<body>
+  <div class = "bg">
   <div class="container" style="width: 50%; height: 50%; top: 200px;">
-    <div class="card-deck">
+    <div id="deck1" class="card-deck">
+	
+	
+
       <div class="card">
         <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg" alt="Card image cap">
         <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">More content</p>
-        </div>
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
+   
+
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo" class="collapse">
+				Info...
+			</div>
+			
         </div>
       </div>
+	 
+	 
       <div class="card">
         <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
         <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text"></p>
+		
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo2" class="collapse">
+				Info...
+			</div>
+			
         </div>
       </div>
-    </div>
-    <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-    </p>
-    <div class="row">
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
+	  
+	  <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
+        <div class="card-block">
+          
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo3" class="collapse">
+				Info...
+			</div>
+			
         </div>
       </div>
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
+	  
+	  <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
+        <div class="card-block">
+          
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo4" class="collapse">
+				Info...
+			</div>
+			
         </div>
       </div>
-    </div>
+	  
+    
+	</div>
+	
+	<div id="deck2" class="card-deck">
+	
+	
+
+      <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg" alt="Card image cap">
+        <div class="card-block">
+   
+
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo5" class="collapse">
+				Info...
+			</div>
+			
+        </div>
+      </div>
+	 
+	 
+      <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
+        <div class="card-block">
+		
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo6" class="collapse">
+				Info...
+			</div>
+			
+        </div>
+      </div>
+	  
+	  <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
+        <div class="card-block">
+          
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo7" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo7" class="collapse">
+				Info...
+			</div>
+			
+        </div>
+      </div>
+	  
+	  <div class="card">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/220px-Senator_Rubio_official_portrait.jpg" alt="Card image cap">
+        <div class="card-block">
+          
+			<button style="width:100%" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo8" aria-expanded="true" 
+			aria-controls="collapseOne">Barack Obama</button>
+			<div id="demo8" class="collapse">
+				Info...
+			</div>
+			
+        </div>
+      </div>
+	  
+    
+	</div>
   </div>
-</head>
+  </div>
+</body>
+
+<script>
+
+</script>
 
 </html>
